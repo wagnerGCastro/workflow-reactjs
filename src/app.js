@@ -19,11 +19,27 @@ class App extends Component {
     })
   }
 
+
+  // Promisse [02]  sem Async
+ // componentDidMount () {
+ //    this.getTitle().then((result) => {
+ //         this.setState({ title: result })
+ //    })
+ //  }
+
+
   async componentDidMount () {
-    this.setState({
-      title: await this.getTitle()
-    })
+    try {
+      this.setState({
+        title: await this.getTitle()
+      })
+    } catch (error) {
+      console.log('Opa ocorreu um erro!', this.error)
+    }
+   
   }
+
+
 
   render () {
     return (
