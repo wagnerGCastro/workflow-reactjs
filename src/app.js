@@ -4,6 +4,8 @@ import React, { Component } from 'react'
 
 import './css/style.css'
 
+import ArticleImage from 'components/article-image/ArticleImage'
+
 class App extends Component {
   constructor () {
     super()
@@ -34,6 +36,8 @@ class App extends Component {
     return (
       <div>
         <this.state.Component>{this.state.title}</this.state.Component>
+
+        <ArticleImage />
       </div>
     )
   }
